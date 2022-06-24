@@ -4,3 +4,22 @@ UPDATE wp_options SET option_value = REPLACE ( option_value, 'webanterior.com', 
 UPDATE wp_posts SET guid = REPLACE ( guid, 'webanterior.com', 'webnueva.com' );
 UPDATE wp_posts SET post_content = REPLACE ( post_content, 'webanterior.com', 'webnueva.com' );
 UPDATE wp_postmeta SET meta_value = REPLACE ( meta_value, 'webanterior.com', 'webnueva.com' );
+
+
+https://codepen.io/EightArmsHQ/full/kaZyJd
+
+UPDATE wp_options SET option_value = replace(option_value, 'http://localhost:8888/testing', 'http://www.live-website.com') WHERE option_name = 'home' OR option_name = 'siteurl';
+
+UPDATE wp_posts SET guid = replace(guid, 'http://localhost:8888/testing','http://www.live-website.com');
+
+UPDATE wp_posts SET post_content = replace(post_content, 'http://localhost:8888/testing', 'http://www.live-website.com');
+
+UPDATE wp_postmeta SET meta_value = replace(meta_value,'http://localhost:8888/testing','http://www.live-website.com');
+
+UPDATE wp_options SET option_value = replace(option_value, 'http://www.localhost:8888/testing', 'http://www.live-website.com') WHERE option_name = 'home' OR option_name = 'siteurl';
+
+UPDATE wp_posts SET guid = replace(guid, 'http://www.localhost:8888/testing','http://www.live-website.com');
+
+UPDATE wp_posts SET post_content = replace(post_content, 'http://www.localhost:8888/testing', 'http://www.live-website.com');
+
+UPDATE wp_postmeta SET meta_value = replace(meta_value,'http://www.localhost:8888/testing','http://www.live-website.com');
